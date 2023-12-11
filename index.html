@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CalculadoraArquitectura</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1>CALCULADORA DE COMPLEMENTO A2</h1>
+      <h4>ARQUITECTURA DE COMPUTADORES 2023</h4>
+    </div>
+
+    <div class="container">
+      <h2>ARITMETICA DE DECIMALES</h2>
+      <div id="resultado">RESULTADO:</div>
+      <div class="flex">
+        <div class="inputs">
+          <label for="decimalA">decimal 1:</label>
+          <input type="text" id="decimalA" />
+          <div class="decKeyboard">
+            <button onclick="addNumber('1','decimalA')">1</button>
+            <button onclick="addNumber('2','decimalA')">2</button>
+            <button onclick="addNumber('3','decimalA')">3</button>
+            <button onclick="clearInput('decimalA')">C</button>
+            <button onclick="addNumber('4','decimalA')">4</button>
+            <button onclick="addNumber('5','decimalA')">5</button>
+            <button onclick="addNumber('6','decimalA')">6</button>
+            <button onclick="addNumber('-','decimalA')">-</button>
+            <button onclick="addNumber('7','decimalA')">7</button>
+            <button onclick="addNumber('8','decimalA')">8</button>
+            <button onclick="addNumber('9','decimalA')">9</button>
+            <button onclick="addNumber('0','decimalA')">0</button>
+          </div>
+        </div>
+        <div class="inputs">
+          <label for="decimalB">decimal 2:</label>
+          <input type="text" id="decimalB" />
+          <div class="decKeyboard">
+            <button onclick="addNumber('2','decimalB')">2</button>
+            <button onclick="addNumber('3','decimalB')">3</button>
+            <button onclick="addNumber('1','decimalB')">1</button>
+            <button onclick="clearInput('decimalB')">C</button>
+            <button onclick="addNumber('4','decimalB')">4</button>
+            <button onclick="addNumber('5','decimalB')">5</button>
+            <button onclick="addNumber('6','decimalB')">6</button>
+            <button onclick="addNumber('-','decimalB')">-</button>
+            <button onclick="addNumber('7','decimalB')">7</button>
+            <button onclick="addNumber('8','decimalB')">8</button>
+            <button onclick="addNumber('9','decimalB')">9</button>
+            <button onclick="addNumber('0','decimalB')">0</button>
+          </div>
+        </div>
+        <div class="inputs">
+          <label for="numBits">Número de bits:</label>
+          <input type="text" id="numBits" />
+          <div class="binKeyboard">
+            <button onclick="addNumber('4','numBits')">4</button>
+            <button onclick="addNumber('8','numBits')">8</button>
+            <button onclick="addNumber('16','numBits')">16</button>
+          </div>
+          <button onclick="clearInput('numBits')">C</button>
+        </div>
+      </div>
+      <div class="flex">
+        <button onclick="SumaE()">Calcular Suma</button>
+        <button onclick="RestaE()">Calcular Resta</button>
+        <button onclick="MultiplicacionE()">Calcular Multiplicación</button>
+        <button onclick="DivisionE()">Calcular División</button>
+        <button onclick="clearAll('decimalA','decimalB','numBits','resultado')">
+          Limpiar todo
+        </button>
+      </div>
+    </div>
+
+    <div class="container">
+      <h2>ARITMETICA DE BINARIOS</h2>
+      <div id="resultado2">RESULTADO:</div>
+      <div class="flex">
+        <div class="inputs">
+          <label for="binarioA">Binario 1:</label>
+          <input type="text" id="binarioA" />
+          <div class="binKeyboard">
+            <button onclick="addNumber('0','binarioA')">0</button>
+            <button onclick="addNumber('1','binarioA')">1</button>
+            <button onclick="clearInput('binarioA')">C</button>
+          </div>
+        </div>
+        <div class="inputs">
+          <label for="binarioB">Binario 2:</label>
+          <input type="text" id="binarioB" />
+          <div class="binKeyboard">
+            <button onclick="addNumber('0','binarioB')">0</button>
+            <button onclick="addNumber('1','binarioB')">1</button>
+            <button onclick="clearInput('binarioB')">C</button>
+          </div>
+        </div>
+        <div class="inputs">
+          <label for="numBitsDos">Número de bits:</label>
+          <input type="text" id="numBitsDos" />
+          <div class="decKeyboard">
+            <button onclick="addNumber('4','numBitsDos')">4</button>
+            <button onclick="addNumber('8','numBitsDos')">8</button>
+            <button onclick="addNumber('16','numBitsDos')">16</button>
+            <button onclick="clearInput('numBitsDos')">C</button>
+          </div>
+        </div>
+      </div>
+      <div class="flex">
+        <button onclick="SumaB()">Calcular Suma</button>
+        <button onclick="RestaB()">Calcular Resta</button>
+        <button onclick="MultiplicacionB()">Calcular Multiplicación</button>
+        <button onclick="DivisionB()">Calcular División</button>
+        <button
+          onclick="clearAll('binarioA','binarioB','numBitsDos','resultado2')"
+        >
+          Limpiar todo
+        </button>
+      </div>
+    </div>
+
+    <div class="container">
+      <h2>EXTENSION</h2>
+      <div id="resultado3">RESULTADO:</div>
+      <div class="flex">
+        <div class="inputs">
+          <label for="binario">Binario:</label>
+          <input type="number" id="binario" />
+          <div class="binKeyboard">
+            <button onclick="addNumber('0','binario')">0</button>
+            <button onclick="addNumber('1','binario')">1</button>
+            <button onclick="clearInput('binario')">C</button>
+          </div>
+        </div>
+        <div class="inputs">
+          <label for="bits">Número de bits:</label>
+          <input type="number" id="bits" />
+          <div class="decKeyboard">
+            <button onclick="addNumber('1','bits')">1</button>
+            <button onclick="addNumber('2','bits')">2</button>
+            <button onclick="addNumber('3','bits')">3</button>
+            <button onclick="addNumber('0','bits')">0</button>
+            <button onclick="addNumber('4','bits')">4</button>
+            <button onclick="addNumber('5','bits')">5</button>
+            <button onclick="addNumber('6','bits')">6</button>
+            <button onclick="clearInput('bits')">C</button>
+            <button onclick="addNumber('7','bits')">7</button>
+            <button onclick="addNumber('8','bits')">8</button>
+            <button onclick="addNumber('9','bits')">9</button>
+          </div>
+        </div>
+      </div>
+      <div class="flex">
+        <button onclick="clearAll('binario','bits','binario','resultado3')">
+          Limpiar todo
+        </button>
+        <button onclick="extender()">Extender</button>
+      </div>
+    </div>
+
+    <div class="container">
+      <h2>DESPLAZAMIENTO</h2>
+      <div id="resultado4">RESULTADO:</div>
+      <div class="flex">
+        <div class="inputs">
+          <label for="entrada">Binario:</label>
+          <input type="number" id="entrada" />
+          <div class="binKeyboard">
+            <button onclick="addNumber('0','entrada')">0</button>
+            <button onclick="addNumber('1','entrada')">1</button>
+            <button onclick="clearInput('entrada')">C</button>
+          </div>
+        </div>
+        <div class="inputs">
+          <label for="numBits2">Número de bits:</label>
+          <input type="number" id="numBits2" />
+          <div class="decKeyboard">
+            <button onclick="addNumber('4','numBits2')">4</button>
+            <button onclick="addNumber('8','numBits2')">8</button>
+            <button onclick="addNumber('16','numBits2')">16</button>
+            <button onclick="clearInput('numBits2')">C</button>
+          </div>
+        </div>
+        <div class="inputs">
+          <label for="cantBits">Bits a desplazar:</label>
+          <input type="number" id="cantBits" />
+
+          <div class="decKeyboard">
+            <button onclick="addNumber('1','cantBits')">1</button>
+            <button onclick="addNumber('2','cantBits')">2</button>
+            <button onclick="addNumber('3','cantBits')">3</button>
+            <button onclick="addNumber('0','cantBits')">0</button>
+            <button onclick="addNumber('4','cantBits')">4</button>
+            <button onclick="addNumber('5','cantBits')">5</button>
+            <button onclick="addNumber('6','cantBits')">6</button>
+            <button onclick="clearInput('cantBits')">C</button>
+            <button onclick="addNumber('7','cantBits')">7</button>
+            <button onclick="addNumber('8','cantBits')">8</button>
+            <button onclick="addNumber('9','cantBits')">9</button>
+          </div>
+        </div>
+      </div>
+      <div class="flex">
+        <button
+          onclick="clearAll('entrada','numBits2','cantBits','resultado4')"
+        >
+          Limpiar todo
+        </button>
+        <button onclick="desplazar('derecha')">Desplazar a la derecha</button>
+        <button onclick="desplazar('izquierda')">
+          Desplazar a la izquierda
+        </button>
+      </div>
+    </div>
+
+    <div class="container">
+      <p>Diseñada por: Juan Gonzalez - Marlon Puentes</p>
+    </div>
+
+    <script src="./js/suma.js"></script>
+    <script src="./js/resta.js"></script>
+    <script src="./js/multiplicacion.js"></script>
+    <script src="./js/division.js"></script>
+    <script src="./js/extension.js"></script>
+    <script src="./js/desplazamiento.js"></script>
+    <script src="./js/teclado.js"></script>
+  </body>
+</html>

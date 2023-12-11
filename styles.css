@@ -1,0 +1,130 @@
+/* Reset de estilos y estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #181818;
+    color: #fff;
+}
+
+.header {
+    text-align: center;
+    background-color: #9C4BFF;
+    padding: 20px;
+    box-shadow: 0 0 30px rgba(156, 75, 255, 0.5);
+    
+}
+
+.container {
+    flex: 1;
+    margin: 20px;
+    padding: 20px;
+    background-color: #212121;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+    border: 1px solid #9C4BFF;   
+}
+
+.inputs{
+    flex: 1;
+    margin: 20px 5px;
+    padding: 20px;
+    background-color: #252525;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .4);    
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    margin-top: 20px;
+    color: #9C4BFF;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+
+select,
+button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+/* Estilos generales para los inputs */
+input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    font-size: 16px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    background-color: transparent;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* Estilos cuando el input está enfocado */
+input:focus {
+    border-color: #9C4BFF;
+    box-shadow: 0 0 5px rgba(156, 75, 255, 0.5);
+    outline: none;
+}
+
+
+button {
+    background-color: #BE89FF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 15px;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #A55BFF;
+}
+
+h3 {
+    margin-top: 20px;
+}
+
+#resultado,
+#resultado2,
+#resultado3,
+#resultado4 {
+    margin-top: 10px;
+    padding: 10px;
+    color: #212121;
+    background-color: #F2E7FF;
+    border: 1px solid #DDBFFF;
+    border-radius: 5px;
+}
+
+.decKeyboard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+    margin-top: 10px;
+}
+
+.binKeyboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+    margin-top: 10px;
+}
